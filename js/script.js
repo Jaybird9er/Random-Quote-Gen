@@ -10,10 +10,12 @@ document.getElementById('loadQuote').addEventListener("click", printQuote, false
 Variables
 ***************/
 
+/*
 var randomQuote = '';
 var randomSource = '';
 var randomCitation = '';
 var randomYear = '';
+*/
 
 /**************
 Functions
@@ -34,8 +36,14 @@ function getRandomQuote(newQuote) {
 
 //Print Quote Function
 
-/*function printQuote( writeQuote ) {
-	var quote = document.getElementById('quote');
-	var quoteBoxDiv.innerHTML = writeQuote;
+function printQuote( output ) {
+	var printOutput = getRandomQuote();
+	var outputString = '<p class="quote">' + printOutput.quote + '</p>';
+	outputString += '<p class="source">' + printOutput.source;
+  outputString += '<span class="citation">' + printOutput.citation + '</span>';
+  outputString += '<span class="year">' + printOutput.year + '</span></p>';
+	var output = outputString;
+	return output;
 }
-*/
+
+printQuote(document.getElementById('quote-box').innerHTML);
