@@ -27,7 +27,7 @@ function printQuote( output ) {
 		var outputString = '<p class="quote">' + printOutput.quote + '</p>';
 		outputString += '<p class="source">' + printOutput.source;
 		if ( printOutput.citation === undefined && printOutput.year === undefined ) {
-			outputString += '</p>';
+			outputString;
 		} else if ( printOutput.citation === undefined ) {
 			outputString += '<span class="year">' + printOutput.year + '</span>';
 		} else if ( printOutput.year === undefined ) {
